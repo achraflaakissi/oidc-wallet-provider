@@ -231,6 +231,6 @@ const oidc = new Provider('http://localhost:3070', configuration);
 
 app.use("/oidc", oidc.callback());
 
-app.listen(3000, function () {
-    console.log('OIDC is listening on port 3000!');
+app.listen(8080, function () {
+    console.log('OIDC is listening on port 8080!');
 });
