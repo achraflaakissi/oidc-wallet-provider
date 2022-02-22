@@ -227,7 +227,7 @@ app.get('/interaction/:uid/abort', setNoCache, async (req, res, next) => {
     }
 });
 
-const oidc = new Provider('http://localhost:3070', configuration);
+const oidc = new Provider('https://mailtowallet.sitecreatortest.com', configuration);
 
 app.use("/oidc", oidc.callback());
 
