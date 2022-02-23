@@ -43,11 +43,11 @@ passport.deserializeUser(function (user, done) {
     done(null, user);
 });
 
-Issuer.discover('http://34.203.223.127:3000/oidc')
+Issuer.discover('http://localhost:8000/oidc')
     .then(function (oidcIssuer) {
         var client = new oidcIssuer.Client({
-            client_id: 'oidcCLIENT',
-            client_secret: 'bar',
+            client_id: 'achraf',
+            client_secret: 'laakissi',
             redirect_uris: ["http://localhost:8080/login/callback"],
             response_types: ['code'],
             scope: 'openid email'
