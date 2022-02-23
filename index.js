@@ -65,7 +65,7 @@ const configuration = {
     adapter: Adapter,
     clients: [],
     pkce: {
-        required: () => true,
+        required: () => false,
         methods: [
             'S256'
         ]
@@ -78,6 +78,8 @@ const configuration = {
     features: {
         // disable the packaged interactions
         devInteractions: { enabled: false },
+        deviceFlow: { enabled: true }, // defaults to false
+        revocation: { enabled: true }, // defaults to false
     },
     // let's tell oidc-provider you also support the email scope, which will contain email and
     // email_verified claims
