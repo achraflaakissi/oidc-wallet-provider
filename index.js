@@ -284,6 +284,6 @@ oidc.proxy = true
 
 app.use("/oidc", oidc.callback());
 
-app.listen(8000, function () {
+app.listen(8080, function () {
     console.log('OIDC is listening on port 8080!');
 });
