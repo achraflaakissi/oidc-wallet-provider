@@ -124,7 +124,7 @@ const configuration = {
         DeviceCode: 600 /* 10 minutes in seconds */,
         Grant: 1209600 /* 14 days in seconds */,
         IdToken: 3600 /* 1 hour in seconds */,
-        Interaction: 60 /* 1 min in seconds */,
+        Interaction: 600 /* 1 min in seconds */,
         RefreshToken: function RefreshTokenTTL(ctx, token, client) {
             if (
                 ctx && ctx.oidc.entities.RotatedRefreshToken
