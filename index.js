@@ -7,6 +7,7 @@ const { DynamoDB } = require('aws-sdk');
 const Adapter = require('./adapter');
 const axios = require('axios');
 const AWSCognito = require('amazon-cognito-identity-js');
+var expressLayouts = require('express-ejs-layouts');
 // Adapter.setConfig({
 //     // When running on lambda, parameters are unnecessary because using environment variables.
 //     dynamoDB: new DynamoDB({ region: 'us-east-1' }),
@@ -60,6 +61,7 @@ const registerUser = (email) => {
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 app.use(express.static("public"));
 const configuration = {
     adapter: Adapter,

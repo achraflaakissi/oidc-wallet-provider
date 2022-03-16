@@ -1,6 +1,6 @@
 
 const { DynamoDB } = require('aws-sdk');
-const TABLE_NAME = 'oidc-provider';
+const TABLE_NAME = 'e-commerce-service-oidc-provider-dev';
 const TABLE_REGION = 'us-east-1';
 const dynamoClient = new DynamoDB.DocumentClient({
     region: TABLE_REGION,

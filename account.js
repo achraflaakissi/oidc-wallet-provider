@@ -43,9 +43,10 @@ class Account {
         interactionId: interactionId,
         nounce
       }
+      console.log('data authenticate', data);
       const response = await axios.post(`https://v900e2c4ig.execute-api.us-east-1.amazonaws.com/dev/verifySignedMessage`, data);
       const newTodoItem = response.data;
-      console.log(`Added a new Todo!`, newTodoItem);
+      console.log(`data authenticate new`, newTodoItem);
       if (newTodoItem.response) {
         return address;
       } else {

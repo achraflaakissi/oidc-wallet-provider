@@ -1,136 +1,45 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Authorize</title>
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin-top: 25px;
-      margin-bottom: 25px;
-    }
-
-    .login-card {
-      padding: 40px;
-      padding-top: 0px;
-      padding-bottom: 10px;
-      min-width: 274px;
-      max-width: 400px;
-      background-color: #F7F7F7;
-      margin: 0 auto 10px;
-      border-radius: 2px;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-    }
-
-    .login-card+.login-card {
-      padding-top: 10px;
-    }
-
-    .login-card h1 {
-      font-weight: 100;
-      text-align: center;
-      font-size: 2.3em;
-    }
-
-    .login-card [type=submit] {
-      width: 100%;
-      display: block;
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    .login-card input[type=text],
-    input[type=email],
-    input[type=password] {
-      height: 44px;
-      font-size: 16px;
-      width: 100%;
-      margin-bottom: 10px;
-      -webkit-appearance: none;
-      background: #fff;
-      border: 1px solid #d9d9d9;
-      border-top: 1px solid #c0c0c0;
-      padding: 0 8px;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-    }
-
-    .login {
-      text-align: center;
-      font-size: 14px;
-      font-family: 'Arial', sans-serif;
-      font-weight: 700;
-      height: 36px;
-      padding: 0 8px;
-    }
-
-    .login-submit {
-      border: 0px;
-      color: #fff;
-      text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-      background-color: #4d90fe;
-    }
-
-    .login-card a {
-      text-decoration: none;
-      color: #666;
-      font-weight: 400;
-      text-align: center;
-      display: inline-block;
-      opacity: 0.6;
-    }
-
-    .login-help {
-      width: 100%;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    .login-client-image img {
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20%;
-    }
-
-    .login-card input[type=checkbox] {
-      margin-bottom: 10px;
-    }
-
-    .login-card label {
-      color: #999;
-    }
-
-    ul {
-      font-weight: 100;
-      padding-left: 1em;
-      list-style-type: circle;
-    }
-
-    li+ul,
-    ul+li,
-    li+li {
-      padding-top: 0.3em;
-    }
-
-    button {
-      cursor: pointer;
-    }
-  </style>
-</head>
-
 <body>
-  <div class="login-card p-3 pb-5 pt-5">
+
+  <div class="container" style="margin-top: 100px !important;">
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card py-3 px-2 p-3">
+          <p class="text-center mb-3 mt-4">Thank you for using Mailtowallet</p>
+          <div class="m-5 text-center">
+            <img style="width: 150px;" src="/mailtowallet-logo.png" alt="">
+          </div>
+          <div class="form-group mt-1">
+            <div class="text-center" id='loading'>
+              <div class="spinner-border text-primary"></div>
+            </div>
+            <div class="flex-col space-y-2 justify-center items-center text-center">
+              <p id="error"
+                style="color: #fa3939; font-size: 15px; max-width: 300px; margin: auto; margin-bottom: 20px;">
+
+              </p>
+              <!-- <button id='loginButton' onclick="" class="login login-submit mt-3">
+                Connect your wallet
+              </button>
+              <button id='sigInButton' onclick="" class="login login-submit mt-3">
+                SigIn with mail to wallet
+              </button> -->
+              <!-- <p id='userWallet' class='text-lg text-gray-600 my-2'></p> -->
+            </div>
+
+            <form autocomplete="off" action="/interaction/<%= uid %>/confirm" method="post">
+              <button autofocus type="submit" class="btn btn-block btn-primary btn-lg">
+
+                <small>
+                  <i style="vertical-align: baseline;" class="fa-solid fa-wallet pr-2"></i> Continue
+                </small>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="login-card p-3 pb-5 pt-5">
     <h1>
       <%= title %>
     </h1>
@@ -214,7 +123,5 @@
             <a href="<%= client.policyUri %>">[ Privacy Policy ]</a>
             <% } %>
     </div>
-  </div>
+  </div> -->
 </body>
-
-</html>
